@@ -44,7 +44,7 @@ function atcf_log_pledge_limit( $payment_id, $new_status, $old_status ) {
 			$what = $download[ 'options' ][ 'price_id' ];
 
 			if ( $key == $what ) {
-				$variable_pricing[ $what ][ 'bought' ] = ( isset ( $variable_pricing[ $what ][ 'bought' ] ) ? $variable_pricing[ $what ][ 'bought' ] : 0 ) + 1;
+				$variable_pricing[ $what ][ 'bought' ] = ( isset ( $variable_pricing[ $what ][ 'bought' ] ) ? $variable_pricing[ $what ][ 'bought' ] : 0 ) + $download['quantity'];
 			}
 		}
 
